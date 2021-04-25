@@ -36,29 +36,28 @@ def printa_sinais(num):
     return S, E, M
 
 def expoenteToDecimal(E):
-    eResult = 0
+    e = 0
     j = 0
     for i in range(10, -1, -1):
-        eResult += int(E[j]) * pow(2, i)
+        e += int(E[j]) * pow(2, i)
         j += 1
-    print('E em decimal', eResult)
-    return eResult
+    print('E(decimal) ', e)
+    return e
 
 def mantissaToDecimal(M):
     j = 0
-    mResult = 0
+    m = 0
     for i in range(51, -1, -1):
-        mResult += int(M[j]) * pow(2, i)
+        m += int(M[j]) * pow(2, i)
         j += 1
-    print('M em decimal', mResult)
-    return mResult
+    print('M(decimal) ', m)
+    return m
 
 def raiz_quadrada(e, y):
     if(e % 2 == 0):
-        resultado = pow(2, (e/2)) * math.sqrt((1 + y))
+        print('Resultado ', pow(2, (e/2)) * math.sqrt((1 + y)))
     else:
-        resultado = pow(2, ((e+1)/2)) * (math.sqrt((1+y)) / 1.41421356237309504880168872420969807856967187537694807317667973799)
-    print('Resultado ', resultado)
+        print('Resultado ', pow(2, ((e+1)/2)) * (math.sqrt((1+y)) / 1.41421356237309504880168872420969807856967187537694807317667973799))
 
 def main():
    # num = input("Digite o valor de entrada:  ")
